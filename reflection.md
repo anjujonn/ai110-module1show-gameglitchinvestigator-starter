@@ -5,15 +5,20 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+it was hoenstly really buggy. Making the correct guess seemed impossible as it felt like the game was against me
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
-
+1. new button functionality doesnt fully work--there is no real new session being generated even though the new random number is generated (the secret). When I try to submit new guesses, it wont let me! What I expect is that the session restarts and all values are reset for me to actually start a new game.
+2. the guess vs secret number check is not working where the "higher"/"lower" message is opposite of what it should be. When my guess is low it says I need to make my guess even lower...
+3. for some reason I'm having to click submit multiple times occasionally for the "higher"/"lower" message to update. I expect it to update immedietly after clicking the submit button.
 ---
 
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+ClaudeCode
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
 ---

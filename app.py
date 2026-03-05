@@ -34,7 +34,8 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     try:
-        if guess < secret:
+        #FIXME: Logic here is opposite of what it should be
+        if guess <   secret:
             return "Too High", "📈 Go HIGHER!"
         else:
             return "Too Low", "📉 Go LOWER!"
@@ -132,6 +133,7 @@ with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
 if new_game:
+    #FIXME: the logic here is only partially complete
     st.session_state.attempts = 0
     st.session_state.status = "playing"
     st.session_state.history = []
