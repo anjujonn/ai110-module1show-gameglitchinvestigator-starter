@@ -18,18 +18,20 @@ it was hoenstly really buggy. Making the correct guess seemed impossible as it f
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 ClaudeCode
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-
+For the new_game logic, it originally wasn't fully resetting the game. For this issue, Claude basically added code to fully reset code by resetting the game status and history. I verified this result by looking through the Dev Debug section on the website and checking the live values. I also tested the update by going through the userflow to see if I was getting previous or new errors
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-
+I was having issues with my cmd prompts--when I was trying to run pytest in terminal, I was having trouble as I was running pytest directly instead of adding python tags before (i.e. `pytest` instead of `python -m pytest`). When I asked Claude about the issue, originally it suggested that I needed to download requirements.txt because pytest wasn't downloaded into the environment, however, I've already run requirements.txt prior to running the pytest command. I prompted it again and was more clear about my situation and got the correct solution to add `python -m` before the `pytest`
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+  I would run through a full or necessary amount of user-flow
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+  Well when I ran the test checking the check_guess function, I realized I fixed one part of it correctly, but incorrectly reversed a part (the too low/high messages). I realized I altered a bit much and fixed the code correctly. It showed me that despite my edits, there were still issues
 - Did AI help you design or understand any tests? How?
-
+  AI helped me design the tests by going through my functions and helping me generate proper tests for each function. It understood what each function was doing and helped me build tests that properly and correctly tested functions' functionality
 ---
 
 ## 4. What did you learn about Streamlit and state?
