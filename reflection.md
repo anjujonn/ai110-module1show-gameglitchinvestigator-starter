@@ -37,14 +37,21 @@ I was having issues with my cmd prompts--when I was trying to run pytest in term
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+well it would change if I either trigger restart via streamlit, refresh the page, or if I start a new game
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-- What change did you make that finally gave the game a stable secret number?
+if you rerun the website, streamlit will run the website again from top to bottom regardless of where you previously were. 
 
+Everytime you're on the website theres a lot of data thats flowing through the website (like the number of guesses you have left, etc.), but that data needs to keep changing, especially when you have major events like "new game". Session state is this major event-like data that survives the rerun.  
+- What change did you make that finally gave the game a stable secret number?
+Just by checking if secret isnt in the session state. It should be generated at the start and then never again until a new game is triggered
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+One habit I would like to reuse is how I shifted a lot of the time-consuming and thoughless-labor to AI. For example, isntead of manually cut-and-past-ing the code from app.py to logic_utils.py, I had Claude do it 
 - What is one thing you would do differently next time you work with AI on a coding task?
+Probably prompt a bit better than I did for this project.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+I think it made me feel a lot less guilty than I normally would feel. It feels like a cheetcode to a puzzle. Although I knew this already, I struggled to actively view AI as a tool and not a cheetcode.

@@ -26,12 +26,20 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+      This is a guessing game (with three modes: Easy, Normal, Hard) where the user is to guess a number within a range. The guess checker allows a fixed number of tries with hints informing the user of whether they need to go higher or lower
 - [ ] Detail which bugs you found.
+      1. New button functionality originally didn't fully work. When users try to submit new guesses, it won't allow them as the states aren't updated.
+      2. The guess vs secret number check was not working where the "higher"/"lower" message is opposite of what it should be.
 - [ ] Explain what fixes you applied.
+      1. The issue was cused by the history and game's state not being reverted back to the original, and so I emptied/reverted both states
+      2. I reversed the logic, and so if the guess is lower than it should be, the message outputs "Too Low" and if it's too high then "Too High"
+
+![Test Results](image-1.png)
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [ ] [![Demo](image.png)]
+
 
 ## 🚀 Stretch Features
 
